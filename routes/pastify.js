@@ -1,13 +1,12 @@
-var clip = require('clip');
-
 /*
  * GET current clipboard
  */
 var pastifing = '';
 
 exports.get = function(req, res){
+  res.contentType('application/json');
   res.send(JSON.stringify({
-	  text: clip.get()//pastifing
+	  text: pastifing
   }));
 };
 
